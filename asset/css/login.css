@@ -1,0 +1,256 @@
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(253, 253, 254);
+}
+
+.login {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    background-color: rgba(246, 240, 239, 0.053);
+    box-shadow: 0px 0px 30px rgba(168, 138, 133, 0.218);
+    border-radius: 15px;
+    display: grid;
+    padding: 0 100px;
+    overflow: hidden;
+}
+
+.login--user {
+    position: relative;
+}
+
+.login--user::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 1000px;
+    height: 5000px;
+    background-color: red;
+}
+
+.box {
+    margin-top: 15%;
+    place-content: center;
+    display: flex; flex-direction: column;
+    width: 100%;
+    gap: 100px;
+    transform: translateY(0);
+    transition: all ease 0.5s 0.2s;
+}
+
+.transit {
+    display: none;
+    border-radius: 15px;
+    background-image: url(https://media.tenor.com/WrOlPBLlU9wAAAAC/anime-rikka-finger-spin.gif);
+    background-size: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    background-color: var(--main-red);
+    width: 0%;
+    float: right;
+    height: 100%;
+    z-index: 3;
+    top: 0;
+    animation: trans 1s ease;
+}
+
+@keyframes trans {
+    0% {
+        top: 0; left: 0;
+        width: 0%;
+    }
+    40% {
+        top: 0; left: 0;
+        width: 100%;
+    }
+    60% {
+        top: 0; right: 0;
+        width: 100%;
+    }
+    100% {
+        top: 0; right: 0;
+        width: 0%;
+    }
+}
+
+.login__box {
+    display: flex; flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.login img {
+    width: 50%;
+    margin-bottom: 10px;
+}
+
+.login b {
+    font-size: 2.6rem;
+}
+
+.login span {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.login input {
+    width: 100%;
+    padding: 15px 20px;
+    border: 1px solid rgb(214, 214, 214);
+    border-radius: 10px;
+    box-shadow: 0 0 0 rgb(186, 186, 186);
+    transition: all cubic-bezier(.03,.63,.3,.99) 0.3s;
+}
+
+.login input:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgb(219, 225, 231);
+    width: 110%;
+}
+
+@keyframes pop {
+    0% {
+        width: 100%;
+    } 50% {
+        width: 110%;
+        background-color: rgba(218, 188, 188, 0.482);
+    } 100% {
+        width: 100%;
+    }
+}
+
+.login a {
+    align-self: flex-end;;
+}
+
+.price__button--hover::before {
+    border-radius: 10px;
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0%; height: 101%;
+    background-color: white;
+    animation: scaleX4 0.3s ease-out forwards;
+    z-index: 1;
+    float: left;
+}
+
+.price__button--hover:hover::before {
+    animation: scaleX3 0.3s ease-out forwards;
+}
+
+@keyframes scaleX3 {
+    0% {
+        top: -0.0; left: -0.2px;
+        width: 0%;
+    } 100% {
+        top: -0.0; left: -0.2px;
+        width: 100%;
+    }
+}
+
+@keyframes scaleX4 {
+    0% {
+        top: 0; right: 0;
+        width: 100%;
+    } 100% {
+        top: 0; right: 0;
+        width: 00%;
+    }
+}
+
+.price__button--hover span, .price__button--hover i {
+    position: relative;
+    font-size: 1.4rem;
+    z-index: 2;
+}
+
+.price__button--hover:hover {
+    color: var(--main-red);
+}
+
+.price__button__add {
+    border-radius: 10px;
+    border: solid 1px var(--main-red);
+    padding: 15px 0;
+    margin-top: 20px;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    background-color: var(--main-red);
+    color: white;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.price__button__add span {
+    font-family: 'Quicksand' !important;
+}
+
+.btn {
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+.btn span {
+    font-size: 1.4rem;
+    text-decoration: underline;
+}
+
+.login__part {
+    /* display: none; */
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    text-align: center;
+    visibility: visible; */
+}
+
+.register__part {
+    /* display: none; */
+    /* position: absolute;
+    text-align: center;
+    width: 60%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    visibility: hidden; */
+    
+}
+
+@keyframes hide {
+    from {
+        opacity: 1;
+    } to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+        visibility: hidden;
+    } to {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.register__part input {
+    padding: 10px 20px;
+}
+
+.forgot__btn {
+    text-decoration: underline;
+    cursor: pointer;
+}

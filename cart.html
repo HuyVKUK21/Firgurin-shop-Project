@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fingurin - Giỏ hàng</title>
+    <link rel="shortcut icon" type="image/x-icon" href="frontend/img/our-damn-logo.ico" sizes="32x32" />
+    <link rel="stylesheet" href="asset/css/navbar.css">
+    <link rel="stylesheet" href="asset/css/cart.css">
+    <link rel="stylesheet" href="asset/font/Quicksand/quicksand.css">
+    <link rel="stylesheet" href="asset/font/Qicksand-Bold/Quicksand-Bold.css">
+    <link rel="stylesheet" href="asset/fontawesome-free-6.2.0-web/css/all.css">
+    <script src="asset/js/parallax.js" defer></script>
+    <script src="asset/js/cursor.js" defer></script>
+    <script src="asset/js/responsive.js" defer></script>
+    <script src="asset/js/cart.js" defer></script>
+</head>
+<body>
+    <div class="cursor-round"></div>
+    <div class="main"></div>
+    <div data-speed="-1" class="slider">
+        <div class="navbar">
+            <div class="navbar__top">
+                <img class="li-text" src="//theme.hstatic.net/1000160337/1000885200/14/logo.png?v=288" alt="">
+                <div class="navbar__search li-text">
+                    <input type="text">
+                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                <div class="navbar__top__item">
+                    <button class="button is-text" id="menu-button">
+                        <div class="button-inner-wrapper">
+                            <span class="icon menu-icon"></span>
+                        </div>
+                    </button>
+                    <div class="navbar__mobile">
+                        <ul>
+                            <li><a class="li-text" href="home.html">Trang chủ</a></li>
+                            <li><a class="li-text" href="">Thông tin</a></li>
+                            <li><a class="li-text" href="">Sản phẩm</a></li>
+                            <li><a class="li-text" href="https://t.me/joinchat/Gn7UwkXl5DwWH4brm8NQTA">Kết nối</a></li>
+                            <li><a class="li-text" href="">Liên lạc</a></li>
+                        </ul>
+                    </div>
+                    <div class="navbar__top__item__right">
+                        <div class="navbar__top__acc li-text">
+                            <i class="fa-regular fa-user"></i>
+                            <span class="navbar__item-span">Đăng nhập / Đăng ký</span>
+                        </div>
+                        <div class="navbar__top__cart li-text">
+                            <i class="fa-solid fa-cart-shopping">
+                                <div class="count_holder"><f>0</f></div>
+                            </i>
+                            <span class="navbar__item-span">Giỏ hàng</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navbar__bot">
+                <ul>
+                    <li><a class="li-text" href="home.html">Trang chủ</a></li>
+                    <li><a class="li-text" href="">Thông tin</a></li>
+                    <li><a class="li-text" href="">Sản phẩm</a></li>
+                    <li><a class="li-text" href="https://t.me/joinchat/Gn7UwkXl5DwWH4brm8NQTA">Kết nối</a></li>
+                    <li><a class="li-text" href="">Liên lạc</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="directory">
+            <a href="home.html">Trang chủ</a>
+            <a href="">Giỏ hàng</a>
+        </div>
+
+        <div class="title">Giỏ hàng của bạn</div>
+
+        <div class="cart">
+            <div class="cart__left">
+                <div class="cart__head">
+                    <span>Bạn đang có </span>
+                    <b class="ammount">0</b>
+                    <span> sản phẩm trong giỏ</span>
+                </div>
+
+                <div class="cart__product">
+
+                    <div class="cart__item">
+                        <div class="item__top">
+                            <div class="item__info">
+                                <img src="asset/img/product/17Cm-Genshin-T-c-ng-Klee-Hibana-Hi-p-S-Anime-H-nh-1-7-Quy.jpg_Q90.jpg_.jpg" alt="">
+                                <div class="details">
+                                    <b>Genshin Impact Klee Summer</b>
+                                    <div class="buy__ammount li-text">
+                                        <button class="ammount-sub">-</button>
+                                        <input class="ammount-input" type="tel" value="1">
+                                        <button class="ammount-add">+</button>
+                                    </div>
+                                    <b class="price">9.800.000đ</b>
+                                </div>
+                            </div>
+                            <i class="fa-regular fa-trash-can li-text"></i>
+                        </div>
+                        <div class="item__bot">
+                            <b>Thành tiền :</b>
+                            <span class="total">9.800.000đ</span>
+                        </div>
+                    </div>
+
+                    
+
+
+
+                </div>
+            </div>
+            <div class="cart__right">
+                <span>Thông tin đơn hàng</span>
+                <div class="right__total">
+                    <b>Thành tiền :</b>
+                    <b class="order__total">0đ</b>
+                </div>
+                <ul>
+                    <li>Phí vận chuyển sẽ được tính ở trang thanh toán.</li>
+                    <li>Bạn cũng có thể nhập mã giảm giá ở trang thanh toán.</li>
+                </ul>
+
+                <button class="price__button__add price__button--hover li-text">
+                    <span>Thanh toán</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="footer__top">
+                <span>Follow Figurin on Instagram</span>
+                @figurin.vnn
+            </div>
+            <div class="footer__mid">
+                <div class="footer__mid__img hover--style1">
+                    <img src="asset/img/footer/gallery_item_1_img.webp">
+                </div>
+                <div class="footer__mid__img hover--style1">
+                    <img src="asset/img/footer/gallery_item_2_img.webp">
+                </div>
+                <div class="footer__mid__img hover--style1">
+                    <img src="asset/img/footer/gallery_item_3_img.webp">
+                </div>
+                <div class="footer__mid__img hover--style1">
+                    <img src="asset/img/footer/gallery_item_4_img.jpg">
+                </div>
+                <div class="footer__mid__img hover--style1">
+                    <img src="asset/img/footer/gallery_item_5_img.jpg">
+                </div>
+                <div class="footer__mid__img hover--style1">
+                    <img src="asset/img/footer/gallery_item_6_img.jpg">
+                </div>
+            </div>
+
+            <div class="footer__bot"></div>
+        </div>
+</body>
+</html>

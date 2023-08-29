@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tất cả sản phẩm - Figurin</title>
+    <link rel="shortcut icon" type="image/x-icon" href="frontend/img/our-damn-logo.ico" sizes="32x32" />
+    <link rel="stylesheet" href="asset/css/main.css">
+    <link rel="stylesheet" href="asset/css/navbar.css">
+    <link rel="stylesheet" href="asset/font/Quicksand/quicksand.css">
+    <link rel="stylesheet" href="asset/fontawesome-free-6.2.0-web/css/all.css">
+    <script src="asset/js/parallax.js" defer></script>
+    <script src="asset/js/cursor.js" defer></script>
+    <script src="asset/js/responsive.js" defer></script>
+</head>
+<body>
+    <div class="cursor-round"></div>
+    <div class="main"></div>
+    <div data-speed="-1" class="slider">
+        <div class="navbar">
+            <div class="navbar__top">
+                <img class="li-text" src="asset/img/logo.webp" alt="">
+                <div class="navbar__search li-text">
+                    <input type="text">
+                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                <div class="navbar__top__item">
+                    <button class="button is-text" id="menu-button">
+                        <div class="button-inner-wrapper">
+                            <span class="icon menu-icon"></span>
+                        </div>
+                    </button>
+                    <div class="navbar__mobile">
+                        <ul>
+                            <li><a class="li-text" href="home.html">Trang chủ</a></li>
+                            <li><a class="li-text" href="">Thông tin</a></li>
+                            <li class="nav__product__mobile">
+                                <a class="li-text">Sản phẩm</a>
+                                <div class="product__drop__mobile">
+                                    <a href="">Tất cả sản phẩm</a>
+                                    <a href="">Hàng có sẵn</a>
+                                    <a href="">Hàng order</a>
+                                    <a href="">R18</a>
+                                    <a href="">Scale Figure</a>
+                                </div>
+                            </li>
+                            <li><a class="li-text" href="https://t.me/joinchat/Gn7UwkXl5DwWH4brm8NQTA">Kết nối</a></li>
+                            <li><a class="li-text" href="">Liên lạc</a></li>
+                        </ul>
+                    </div>
+                    <div class="navbar__top__item__right">
+                        <div class="navbar__top__acc li-text">
+                            <i class="fa-regular fa-user"></i>
+                            <span class="navbar__item-span">Đăng nhập / Đăng ký</span>
+                        </div>
+                        <div class="navbar__top__cart li-text">
+                            <i class="fa-solid fa-cart-shopping">
+                                <div class="count_holder"><f>0</f></div>
+                            </i>
+                            <span class="navbar__item-span">Giỏ hàng</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navbar__bot">
+                <ul>
+                    <li><a class="bot__item li-text" href="home.html">Trang chủ</a></li>
+                    <li><a class="bot__item li-text" href="">Thông tin</a></li>
+                    <li class="nav__product">
+                        <a class="bot__item li-text" href="">Sản phẩm</a>
+                        <i class="fa-solid fa-chevron-down arrow--down"></i>
+                            <div class="product__drop">
+                                <a href="">Tất cả sản phẩm</a>
+                                <a href="">Hàng có sẵn</a>
+                                <a href="">Hàng order</a>
+                                <a href="">R18</a>
+                                <a href="">Scale Figure</a>
+                            </div>
+                    </li>
+                    <li><a class="bot__item li-text" href="https://t.me/joinchat/Gn7UwkXl5DwWH4brm8NQTA">Kết nối</a></li>
+                    <li><a class="bot__item li-text" href="">Liên lạc</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="banner">
+            <img src="asset/img/collection_banner.webp" alt="">
+        </div>
+
+        <div class="content">
+            <div class="collection">
+                <span>Tất cả sản phẩm</span>
+                <div class="collection__categ collection__categ--mobile li-text">
+                    <i class="fa-solid fa-angle-down"></i>
+                    Sắp xếp
+                    <div class="categ__box">
+                        <ul>
+                            <li class="categ--check">
+                                <i class="fa-solid fa-check"></i>
+                                Tất cả sản phẩm</li>
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Hàng có sẵn</li>
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Hàng order</li>
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                R18</li>
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Scale Figure</li>
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Art book</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="filter">
+                <i class="fa-solid fa-filter"></i>
+                Phân loại
+
+                <div class="filter__seperate"></div>
+
+                <div class="filter__option li-text">
+                    Thương hiệu
+                    <i class="fa-solid fa-arrow-down"></i>
+                    <div class="filler__box">
+                        <ul>
+                            <li>
+                                <label>
+                                    <input type="radio" name="brand" checked> Mọi hãng
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="brand" if (band) { echo "checked"} else {echo ""}> Good Smile Company
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="brand"> Max Factory
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="brand"> FREEing
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="brand"> The One Piece
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="filter__option li-text">
+                    Lọc giá
+                    <i class="fa-solid fa-arrow-down"></i>
+                    <div class="filler__box">
+                        <ul>
+                            <li>
+                                <label>
+                                    <input type="radio" name="price" checked> Mọi giá
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="price"> Dưới 1.000.000₫
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="price"> 1.000.000₫ - 2.000.000₫
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="price"> 2.000.000₫ - 3.000.000₫
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="price"> 3.000.000₫ - 4.000.000₫
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="price"> Trên 4.000.000₫
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="filter__option li-text">
+                    Tỉ lệ
+                    <i class="fa-solid fa-arrow-down"></i>
+                    <div class="filler__box">
+                        <ul>
+                            <li>
+                                <label>
+                                    <input type="radio" name="scale" checked> Mọi tỉ lệ
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="scale"> 1/12
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="scale"> 1/10
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="scale"> 1/7
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="scale"> 1/6
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="scale"> 1/5
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="scale"> 1/4
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="scale"> 1/3
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="scale"> Non-scale
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="filter__mobile">
+                <div class="mobile__op mobile-filter">
+                    <i class="fa-solid fa-filter mobile-filter__click"></i>
+                    Phân loại
+                    <div class="filter__box">
+                        <ul>
+                            <li>
+                                <span class="filter__brand">Thương hiệu</span>
+                                <div class="filter__box__detail filter__brand--detail">
+                                    <ul>
+                                        <li>
+                                            <label>
+                                                <input type="radio" name="brandm" checked> Mọi hãng
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="radio" name="brandm"> Good Smile Company
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="radio" name="brandm"> Max Factory
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="radio" name="brandm"> FREEing
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="radio" name="brandm"> The One Piece
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="filter__price">Lọc giá</span>
+                                <div class="filter__box__detail filter__price--detail">
+                                    <ul>
+                                        <li>
+                                            <label>
+                                                <input type="radio" name="pricem" checked> Mọi giá
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="radio" name="pricem"> Dưới 1.000.000₫
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="radio" name="pricem"> 1.000.000₫ - 2.000.000₫
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="radio" name="pricem"> 2.000.000₫ - 3.000.000₫
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="radio" name="pricem"> 3.000.000₫ - 4.000.000₫
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="radio" name="pricem"> Trên 4.000.000₫
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="filter__scale">Tỉ lệ</span>
+                                <div class="filter__box__detail filter__slace--detail">
+                                    <ul>
+                                        <li>
+                                            <label>
+                                                <input type="radio" name="scalem" checked> Mọi tỉ lệ
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="radio" name="scalem"> 1/12
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="radio" name="scalem"> 1/10
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="radio" name="scalem"> 1/7
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="radio" name="scalem"> 1/6
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="radio" name="scalem"> 1/5
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="radio" name="scalem"> 1/4
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="radio" name="scalem"> 1/3
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="radio" name="scalem"> Non-scale
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mobile__op mobile-collect">
+                    <i class="fa-solid fa-angle-down mobile-collect__click"></i>
+                    Sắp xếp
+                    <div class="categ__box">
+                        <ul>
+                            <li class="categ--check">
+                                Tất cả sản phẩm
+                                <i class="fa-solid fa-check"></i></li>
+                            <li>Hàng có sẵn
+                                <i class="fa-solid fa-check"></i>
+                            </li>
+                            <li>Hàng order
+                                <i class="fa-solid fa-check"></i>
+                                </li>
+                            <li>R18
+                                <i class="fa-solid fa-check"></i>
+                                </li>
+                            <li>Scale Figure
+                                <i class="fa-solid fa-check"></i>
+                                </li>
+                            <li>Art book
+                                <i class="fa-solid fa-check"></i>
+                                </li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="product">
+                <div class="product__item">
+                    <a href="">
+                        <img src="asset/img/product/28cm-Anime-Genshin-Impact-Figure-Hu-Tao-Figure-Hutao-Action-Figures-Collection-Model-Figurine-Doll-Toys.jpg_Q90.jpg_.jpg" alt="">
+                    </a>
+                    <div class="product__item__price">
+                        <f>Genshin Impact : Fire Dance Hutao Limited</f>
+                        <span>2.400.000₫</span>
+                        <div class="price__button">
+                            <button class="price__button__add price__button--hover">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span>Thêm vào giỏ</span>
+                            </button>
+                            <button class="price__button__buy price__button--hover">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                                <span>Mua ngay</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product__item">
+                    <a href="">
+                        <img src="asset/img/product/17Cm-Genshin-T-c-ng-Klee-Hibana-Hi-p-S-Anime-H-nh-1-7-Quy.jpg_Q90.jpg_.jpg" alt="">
+                    </a>
+                    <div class="product__item__price">
+                        <f>Genshin Impact : Summer Bombin Klee</f>
+                        <span>3.110.000₫</span>
+                        <div class="price__button">
+                            <button class="price__button__add price__button--hover">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span>Thêm vào giỏ</span>
+                            </button>
+                            <button class="price__button__buy price__button--hover">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                                <span>Mua ngay</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product__item"></div>
+                <div class="product__item"></div>
+                <div class="product__item"></div>
+                
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="footer__top">
+                <span>Follow Figurin on Instagram</span>
+                @figurin.vnn
+            </div>
+            <div class="footer__mid">
+                <div class="footer__mid__img hover--style1">
+                    <img src="asset/img/footer/gallery_item_1_img.webp">
+                </div>
+                <div class="footer__mid__img hover--style1">
+                    <img src="asset/img/footer/gallery_item_2_img.webp">
+                </div>
+                <div class="footer__mid__img hover--style1">
+                    <img src="asset/img/footer/gallery_item_3_img.webp">
+                </div>
+                <div class="footer__mid__img hover--style1">
+                    <img src="asset/img/footer/gallery_item_4_img.jpg">
+                </div>
+                <div class="footer__mid__img hover--style1">
+                    <img src="asset/img/footer/gallery_item_5_img.jpg">
+                </div>
+                <div class="footer__mid__img hover--style1">
+                    <img src="asset/img/footer/gallery_item_6_img.jpg">
+                </div>
+            </div>
+
+            <div class="footer__bot"></div>
+        </div>
+    </div>
+</body>
+</html>

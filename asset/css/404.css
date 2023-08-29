@@ -1,0 +1,23 @@
+body {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+b {
+    /* margin: auto; */
+    font-size: 8rem;
+    text-shadow: 10px 10px 0 45deg rgb(200, 200, 200) 45deg;
+}
+
+span {
+    margin-top: 20px;
+    font-size: 2rem;
+}
+
+a {
+    margin-top: 20px;
+    font-size: 2rem;
+}
