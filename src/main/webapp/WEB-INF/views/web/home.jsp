@@ -1,76 +1,18 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
+
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Figurin</title>
-    <link rel="icon" type="image/png" href="asset/img/our damn logo.png" sizes="32x32" />
-    <link rel="stylesheet" href="asset/css/navbar.css">
-    <link rel="stylesheet" href="asset/css/home.css">
-    <link rel="stylesheet" href="asset/font/Quicksand/quicksand.css">
-    <link rel="stylesheet" href="asset/font/Qicksand-Bold/Quicksand-Bold.css">
-    <link rel="stylesheet" href="asset/fontawesome-free-6.2.0-web/css/all.css">
-    <script src="asset/js/parallax.js" defer></script>
-    <script src="asset/js/cursor.js" defer></script>
-    <script src="asset/js/responsive.js" defer></script>
-    <script src="asset/js/home.js" defer></script>
+
+<meta charset="UTF-8">
+
+<title>Trang chủ - Firgurin Shop</title>
+
 </head>
+
 <body>
-    <div class="cursor-round"></div>
-    <div class="main"></div>
-    <div data-speed="-1" class="slider">
-        <div class="navbar">
-            <div class="navbar__top">
-                <img class="li-text" src="asset/img/logo.webp" alt="">
-                <div class="navbar__search li-text">
-                    <input type="text">
-                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
-                </div>
-                <div class="navbar__top__item">
-                    <button class="button is-text" id="menu-button">
-                        <div class="button-inner-wrapper">
-                            <span class="icon menu-icon"></span>
-                        </div>
-                    </button>
-                    <div class="navbar__mobile">
-                        <ul>
-                            <li><a class="li-text" href="">Trang chủ</a></li>
-                            <li><a class="li-text" href="">Thông tin</a></li>
-                            <li><a class="li-text" href="index.html">Sản phẩm</a></li>
-                            <li><a class="li-text" href="https://t.me/joinchat/Gn7UwkXl5DwWH4brm8NQTA">Kết nối</a></li>
-                            <li><a class="li-text" href="">Liên lạc</a></li>
-                        </ul>
-                    </div>
-                    <div class="navbar__top__item__right">
-                        <div class="navbar__top__acc li-text">
-                                <a href="">
-                                    <i class="fa-regular fa-user"></i>
-                                    <span class="navbar__item-span">Đăng nhập / Đăng kí</span>
-                                </a>
-                        </div>
-                        <div class="navbar__top__cart li-text">
-                            <i class="fa-solid fa-cart-shopping">
-                                <div class="count_holder"><f>0</f></div>
-                            </i>
-                            <span class="navbar__item-span">Giỏ hàng</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="navbar__bot">
-                <ul>
-                    <li><a class="li-text" href="">Trang chủ</a></li>
-                    <li><a class="li-text" href="">Thông tin</a></li>
-                    <li><a class="li-text" href="index.html">Sản phẩm</a></li>
-                    <li><a class="li-text" href="https://t.me/joinchat/Gn7UwkXl5DwWH4brm8NQTA">Kết nối</a></li>
-                    <li><a class="li-text" href="">Liên lạc</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="banner">
+<div class="banner">
             <div class="banner-navigate">
                 <div class="banner--button button__left li-text">
                     <i class="fa-solid fa-chevron-left"></i>
@@ -79,11 +21,17 @@
                     <i class="fa-solid fa-chevron-right"></i>
                 </div>
             </div>
-            <img class="banner-slide" src="asset/img/home/slide_1_img.webp" style="display: block;" alt="">
+<!--             <img class="banner-slide" src="asset/img/home/slide_1_img.webp" style="display: block;" alt="">
             <img class="banner-slide" src="asset/img/home/slide_2_img.webp" alt="">
             <img class="banner-slide" src="asset/img/home/slide_3_img.webp" alt="">
             <img class="banner-slide" src="asset/img/home/slide_4_img.webp" alt="">
-            <img class="banner__img" src="asset/img/home/slide_1_img.webp" alt="">
+            <img class="banner__img" src="asset/img/home/slide_1_img.webp" alt=""> -->
+            
+            <img class="banner-slide" src="<c:url value = '/template/web/img/home/slide_1_img.webp'/>" style="display: block;" alt="">
+            <img class="banner-slide" src="<c:url value = '/template/web/img/home/slide_2_img.webp'/>" alt="">
+            <img class="banner-slide" src="<c:url value = '/template/web/img/home/slide_3_img.webp'/>" alt="">
+            <img class="banner-slide" src="<c:url value = '/template/web/img/home/slide_4_img.webp'/>" alt="">
+            <img class="banner__img" src="<c:url value = '/template/web/img/home/slide_1_img.webp'/>" alt="">
         </div>
 
         <div class="colection">
@@ -98,7 +46,8 @@
                             <span>Xem ngay</span>
                         </button>
                 </div>
-                <img src="asset/img/home/categorybanner_1_img.webp" alt="">
+                 <img src="<c:url value = '/template/web/img/home/categorybanner_1_img.webp'/>" alt="">
+               <!--  <img src="asset/img/home/categorybanner_1_img.webp" alt=""> -->
             </div>
             <div class="collection__content li-text">
                 <div class="collection__content__left">
@@ -111,7 +60,8 @@
                         <span>Xem ngay</span>
                     </button>
                 </div>
-                <img src="asset/img/home/categorybanner_2_img.webp" alt="">
+                <img src="<c:url value = '/template/web/img/home/categorybanner_2_img.webp'/>" alt="">
+            <!--     <img src="asset/img/home/categorybanner_2_img.webp" alt=""> -->
             </div>
         </div>
 
@@ -121,7 +71,8 @@
                 <b>Sản phẩm order</b>
                 <span>Những sản phẩm đã hoặc sắp phát hành & cần đặt trước</span>
                 <div class="cata__box order">
-                    <img src="asset/img/home/home_collection_1_banner.webp" alt="">
+                <img src="<c:url value = '/template/web/img/home/home_collection_1_banner.webp'/>" alt="">
+                   <!--  <img src="asset/img/home/home_collection_1_banner.webp" alt=""> -->
                     <div class="cata__contain">
                         <div class="cata__navigate">
                             <div class="cata--button cata--left">
@@ -134,7 +85,8 @@
                         <div class="product">
                             <div class="product__item">
                                 <a href="">
-                                    <img src="asset/img/product/28cm-Anime-Genshin-Impact-Figure-Hu-Tao-Figure-Hutao-Action-Figures-Collection-Model-Figurine-Doll-Toys.jpg_Q90.jpg_.jpg" alt="">
+                                 <img src="<c:url value = '/template/web/img/product/28cm-Anime-Genshin-Impact-Figure-Hu-Tao-Figure-Hutao-Action-Figures-Collection-Model-Figurine-Doll-Toys.jpg_Q90.jpg_.jpg'/>" alt="">
+                                    <!-- <img src="asset/img/product/28cm-Anime-Genshin-Impact-Figure-Hu-Tao-Figure-Hutao-Action-Figures-Collection-Model-Figurine-Doll-Toys.jpg_Q90.jpg_.jpg" alt=""> -->
                                 </a>
                                 <div class="product__item__price">
                                     <f>Genshin Impact : Fire Dance Hutao Limited</f>
@@ -154,7 +106,8 @@
             
                             <div class="product__item">
                                 <a href="">
-                                    <img src="asset/img/product/17Cm-Genshin-T-c-ng-Klee-Hibana-Hi-p-S-Anime-H-nh-1-7-Quy.jpg_Q90.jpg_.jpg" alt="">
+                                 <img src="<c:url value = '/template/web/img/product/17Cm-Genshin-T-c-ng-Klee-Hibana-Hi-p-S-Anime-H-nh-1-7-Quy.jpg_Q90.jpg_.jpg'/>" alt="">
+                                    <!-- <img src="asset/img/product/17Cm-Genshin-T-c-ng-Klee-Hibana-Hi-p-S-Anime-H-nh-1-7-Quy.jpg_Q90.jpg_.jpg" alt=""> -->
                                 </a>
                                 <div class="product__item__price">
                                     <f>Genshin Impact : Summer Bombin Klee</f>
@@ -174,7 +127,8 @@
     
                             <div class="product__item">
                                 <a href="">
-                                    <img src="asset/img/product/17Cm-Genshin-T-c-ng-Klee-Hibana-Hi-p-S-Anime-H-nh-1-7-Quy.jpg_Q90.jpg_.jpg" alt="">
+                                <img src="<c:url value = '/template/web/img/product/17Cm-Genshin-T-c-ng-Klee-Hibana-Hi-p-S-Anime-H-nh-1-7-Quy.jpg_Q90.jpg_.jpg'/>" alt="">
+                                   <!--  <img src="asset/img/product/17Cm-Genshin-T-c-ng-Klee-Hibana-Hi-p-S-Anime-H-nh-1-7-Quy.jpg_Q90.jpg_.jpg" alt=""> -->
                                 </a>
                                 <div class="product__item__price">
                                     <f>Genshin Impact : Summer Bombin Klee</f>
@@ -194,7 +148,8 @@
     
                             <div class="product__item">
                                 <a href="">
-                                    <img src="asset/img/product/17Cm-Genshin-T-c-ng-Klee-Hibana-Hi-p-S-Anime-H-nh-1-7-Quy.jpg_Q90.jpg_.jpg" alt="">
+                                 <img src="<c:url value = '/template/web/img/product/17Cm-Genshin-T-c-ng-Klee-Hibana-Hi-p-S-Anime-H-nh-1-7-Quy.jpg_Q90.jpg_.jpg'/>" alt="">
+                                   <!--  <img src="asset/img/product/17Cm-Genshin-T-c-ng-Klee-Hibana-Hi-p-S-Anime-H-nh-1-7-Quy.jpg_Q90.jpg_.jpg" alt=""> -->
                                 </a>
                                 <div class="product__item__price">
                                     <f>Genshin Impact : Summer Bombin Klee</f>
@@ -214,7 +169,8 @@
     
                             <div class="product__item">
                                 <a href="">
-                                    <img src="asset/img/product/17Cm-Genshin-T-c-ng-Klee-Hibana-Hi-p-S-Anime-H-nh-1-7-Quy.jpg_Q90.jpg_.jpg" alt="">
+                                 <img src="<c:url value = '/template/web/img/product/17Cm-Genshin-T-c-ng-Klee-Hibana-Hi-p-S-Anime-H-nh-1-7-Quy.jpg_Q90.jpg_.jpg'/>" alt="">
+                                  <!--   <img src="asset/img/product/17Cm-Genshin-T-c-ng-Klee-Hibana-Hi-p-S-Anime-H-nh-1-7-Quy.jpg_Q90.jpg_.jpg" alt=""> -->
                                 </a>
                                 <div class="product__item__price">
                                     <f>Genshin Impact : Summer Bombin Klee</f>
@@ -234,7 +190,8 @@
     
                             <div class="product__item">
                                 <a href="">
-                                    <img src="asset/img/product/17Cm-Genshin-T-c-ng-Klee-Hibana-Hi-p-S-Anime-H-nh-1-7-Quy.jpg_Q90.jpg_.jpg" alt="">
+                                 <img src="<c:url value = '/template/web/img/product/17Cm-Genshin-T-c-ng-Klee-Hibana-Hi-p-S-Anime-H-nh-1-7-Quy.jpg_Q90.jpg_.jpg'/>" alt="">
+                       <!--              <img src="asset/img/product/17Cm-Genshin-T-c-ng-Klee-Hibana-Hi-p-S-Anime-H-nh-1-7-Quy.jpg_Q90.jpg_.jpg" alt=""> -->
                                 </a>
                                 <div class="product__item__price">
                                     <f>Genshin Impact : Summer Bombin Klee</f>
@@ -254,7 +211,8 @@
     
                             <div class="product__item">
                                 <a href="">
-                                    <img src="asset/img/product/17Cm-Genshin-T-c-ng-Klee-Hibana-Hi-p-S-Anime-H-nh-1-7-Quy.jpg_Q90.jpg_.jpg" alt="">
+                                 <img src="<c:url value = '/template/web/img/product/17Cm-Genshin-T-c-ng-Klee-Hibana-Hi-p-S-Anime-H-nh-1-7-Quy.jpg_Q90.jpg_.jpg'/>" alt="">
+                                   <!--  <img src="asset/img/product/17Cm-Genshin-T-c-ng-Klee-Hibana-Hi-p-S-Anime-H-nh-1-7-Quy.jpg_Q90.jpg_.jpg" alt=""> -->
                                 </a>
                                 <div class="product__item__price">
                                     <f>Genshin Impact : Summer Bombin Klee</f>
@@ -275,7 +233,8 @@
 
                             <div class="product__item">
                                 <a href="">
-                                    <img src="asset/img/product/17Cm-Genshin-T-c-ng-Klee-Hibana-Hi-p-S-Anime-H-nh-1-7-Quy.jpg_Q90.jpg_.jpg" alt="">
+                                 <img src="<c:url value = '/template/web/img/product/17Cm-Genshin-T-c-ng-Klee-Hibana-Hi-p-S-Anime-H-nh-1-7-Quy.jpg_Q90.jpg_.jpg'/>" alt="">
+                               <!--      <img src="asset/img/product/17Cm-Genshin-T-c-ng-Klee-Hibana-Hi-p-S-Anime-H-nh-1-7-Quy.jpg_Q90.jpg_.jpg" alt=""> -->
                                 </a>
                                 <div class="product__item__price">
                                     <f>Genshin Impact : Summer Bombin Klee</f>
@@ -296,7 +255,8 @@
 
                             <div class="product__item">
                                 <a href="">
-                                    <img src="asset/img/product/17Cm-Genshin-T-c-ng-Klee-Hibana-Hi-p-S-Anime-H-nh-1-7-Quy.jpg_Q90.jpg_.jpg" alt="">
+                                 <img src="<c:url value = '/template/web/img/product/17Cm-Genshin-T-c-ng-Klee-Hibana-Hi-p-S-Anime-H-nh-1-7-Quy.jpg_Q90.jpg_.jpg'/>" alt="">
+   <!--                                  <img src="asset/img/product/17Cm-Genshin-T-c-ng-Klee-Hibana-Hi-p-S-Anime-H-nh-1-7-Quy.jpg_Q90.jpg_.jpg" alt=""> -->
                                 </a>
                                 <div class="product__item__price">
                                     <f>Genshin Impact : Summer Bombin Klee</f>
@@ -317,7 +277,8 @@
 
                             <div class="product__item">
                                 <a href="">
-                                    <img src="asset/img/product/17Cm-Genshin-T-c-ng-Klee-Hibana-Hi-p-S-Anime-H-nh-1-7-Quy.jpg_Q90.jpg_.jpg" alt="">
+                                 <img src="<c:url value = '/template/web/img/product/17Cm-Genshin-T-c-ng-Klee-Hibana-Hi-p-S-Anime-H-nh-1-7-Quy.jpg_Q90.jpg_.jpg'/>" alt="">
+        <!--                             <img src="asset/img/product/17Cm-Genshin-T-c-ng-Klee-Hibana-Hi-p-S-Anime-H-nh-1-7-Quy.jpg_Q90.jpg_.jpg" alt=""> -->
                                 </a>
                                 <div class="product__item__price">
                                     <f>Genshin Impact : Summer Bombin Klee</f>
@@ -350,7 +311,8 @@
                 <b>Sản phẩm order</b>
                 <span>Những sản phẩm đã hoặc sắp phát hành & cần đặt trước</span>
                 <div class="cata__box">
-                    <img src="asset/img/home/home_collection_1_banner.webp" alt="">
+                 <img src="<c:url value = '/template/web/img/home/home_collection_1_banner.web'/>" alt="">
+             <!--        <img src="asset/img/home/home_collection_1_banner.webp" alt=""> -->
                     <div class="cata__contain">
                         <div class="cata__navigate">
                             <div class="cata--button cata--left">
@@ -363,7 +325,8 @@
                         <div class="product">
                             <div class="product__item">
                                 <a href="">
-                                    <img src="asset/img/product/28cm-Anime-Genshin-Impact-Figure-Hu-Tao-Figure-Hutao-Action-Figures-Collection-Model-Figurine-Doll-Toys.jpg_Q90.jpg_.jpg" alt="">
+                                  <img src="<c:url value = '/template/web/img/product/28cm-Anime-Genshin-Impact-Figure-Hu-Tao-Figure-Hutao-Action-Figures-Collection-Model-Figurine-Doll-Toys.jpg_Q90.jpg_.jpg'/>" alt="">
+<!--                                     <img src="asset/img/product/28cm-Anime-Genshin-Impact-Figure-Hu-Tao-Figure-Hutao-Action-Figures-Collection-Model-Figurine-Doll-Toys.jpg_Q90.jpg_.jpg" alt=""> -->
                                 </a>
                                 <div class="product__item__price">
                                     <f>Genshin Impact : Fire Dance Hutao Limited</f>
@@ -383,7 +346,8 @@
             
                             <div class="product__item">
                                 <a href="">
-                                    <img src="asset/img/product/17Cm-Genshin-T-c-ng-Klee-Hibana-Hi-p-S-Anime-H-nh-1-7-Quy.jpg_Q90.jpg_.jpg" alt="">
+                                    <img src="<c:url value = '/template/web/img/product/28cm-Anime-Genshin-Impact-Figure-Hu-Tao-Figure-Hutao-Action-Figures-Collection-Model-Figurine-Doll-Toys.jpg_Q90.jpg_.jpg'/>" alt="">
+                                  <!--   <img src="asset/img/product/17Cm-Genshin-T-c-ng-Klee-Hibana-Hi-p-S-Anime-H-nh-1-7-Quy.jpg_Q90.jpg_.jpg" alt=""> -->
                                 </a>
                                 <div class="product__item__price">
                                     <f>Genshin Impact : Summer Bombin Klee</f>
@@ -403,7 +367,8 @@
     
                             <div class="product__item">
                                 <a href="">
-                                    <img src="asset/img/product/17Cm-Genshin-T-c-ng-Klee-Hibana-Hi-p-S-Anime-H-nh-1-7-Quy.jpg_Q90.jpg_.jpg" alt="">
+                                    <img src="<c:url value = '/template/web/img/product/28cm-Anime-Genshin-Impact-Figure-Hu-Tao-Figure-Hutao-Action-Figures-Collection-Model-Figurine-Doll-Toys.jpg_Q90.jpg_.jpg'/>" alt="">
+<!--                                     <img src="asset/img/product/17Cm-Genshin-T-c-ng-Klee-Hibana-Hi-p-S-Anime-H-nh-1-7-Quy.jpg_Q90.jpg_.jpg" alt=""> -->
                                 </a>
                                 <div class="product__item__price">
                                     <f>Genshin Impact : Summer Bombin Klee</f>
@@ -423,7 +388,8 @@
     
                             <div class="product__item">
                                 <a href="">
-                                    <img src="asset/img/product/17Cm-Genshin-T-c-ng-Klee-Hibana-Hi-p-S-Anime-H-nh-1-7-Quy.jpg_Q90.jpg_.jpg" alt="">
+                                    <img src="<c:url value = '/template/web/img/product/28cm-Anime-Genshin-Impact-Figure-Hu-Tao-Figure-Hutao-Action-Figures-Collection-Model-Figurine-Doll-Toys.jpg_Q90.jpg_.jpg'/>" alt="">
+                                   <!--  <img src="asset/img/product/17Cm-Genshin-T-c-ng-Klee-Hibana-Hi-p-S-Anime-H-nh-1-7-Quy.jpg_Q90.jpg_.jpg" alt=""> -->
                                 </a>
                                 <div class="product__item__price">
                                     <f>Genshin Impact : Summer Bombin Klee</f>
@@ -443,7 +409,8 @@
     
                             <div class="product__item">
                                 <a href="">
-                                    <img src="asset/img/product/17Cm-Genshin-T-c-ng-Klee-Hibana-Hi-p-S-Anime-H-nh-1-7-Quy.jpg_Q90.jpg_.jpg" alt="">
+                                    <img src="<c:url value = '/template/web/img/product/28cm-Anime-Genshin-Impact-Figure-Hu-Tao-Figure-Hutao-Action-Figures-Collection-Model-Figurine-Doll-Toys.jpg_Q90.jpg_.jpg'/>" alt="">
+ <!--                                    <img src="asset/img/product/17Cm-Genshin-T-c-ng-Klee-Hibana-Hi-p-S-Anime-H-nh-1-7-Quy.jpg_Q90.jpg_.jpg" alt=""> -->
                                 </a>
                                 <div class="product__item__price">
                                     <f>Genshin Impact : Summer Bombin Klee</f>
@@ -463,7 +430,8 @@
     
                             <div class="product__item">
                                 <a href="">
-                                    <img src="asset/img/product/17Cm-Genshin-T-c-ng-Klee-Hibana-Hi-p-S-Anime-H-nh-1-7-Quy.jpg_Q90.jpg_.jpg" alt="">
+                                    <img src="<c:url value = '/template/web/img/product/28cm-Anime-Genshin-Impact-Figure-Hu-Tao-Figure-Hutao-Action-Figures-Collection-Model-Figurine-Doll-Toys.jpg_Q90.jpg_.jpg'/>" alt="">
+ <!--                                    <img src="asset/img/product/17Cm-Genshin-T-c-ng-Klee-Hibana-Hi-p-S-Anime-H-nh-1-7-Quy.jpg_Q90.jpg_.jpg" alt=""> -->
                                 </a>
                                 <div class="product__item__price">
                                     <f>Genshin Impact : Summer Bombin Klee</f>
@@ -483,7 +451,8 @@
     
                             <div class="product__item">
                                 <a href="">
-                                    <img src="asset/img/product/17Cm-Genshin-T-c-ng-Klee-Hibana-Hi-p-S-Anime-H-nh-1-7-Quy.jpg_Q90.jpg_.jpg" alt="">
+                                    <img src="<c:url value = '/template/web/img/product/28cm-Anime-Genshin-Impact-Figure-Hu-Tao-Figure-Hutao-Action-Figures-Collection-Model-Figurine-Doll-Toys.jpg_Q90.jpg_.jpg'/>" alt="">
+        <!--                             <img src="asset/img/product/17Cm-Genshin-T-c-ng-Klee-Hibana-Hi-p-S-Anime-H-nh-1-7-Quy.jpg_Q90.jpg_.jpg" alt=""> -->
                                 </a>
                                 <div class="product__item__price">
                                     <f>Genshin Impact : Summer Bombin Klee</f>
@@ -504,7 +473,8 @@
 
                             <div class="product__item">
                                 <a href="">
-                                    <img src="asset/img/product/17Cm-Genshin-T-c-ng-Klee-Hibana-Hi-p-S-Anime-H-nh-1-7-Quy.jpg_Q90.jpg_.jpg" alt="">
+                                    <img src="<c:url value = '/template/web/img/product/28cm-Anime-Genshin-Impact-Figure-Hu-Tao-Figure-Hutao-Action-Figures-Collection-Model-Figurine-Doll-Toys.jpg_Q90.jpg_.jpg'/>" alt="">
+                                  <!--   <img src="asset/img/product/17Cm-Genshin-T-c-ng-Klee-Hibana-Hi-p-S-Anime-H-nh-1-7-Quy.jpg_Q90.jpg_.jpg" alt=""> -->
                                 </a>
                                 <div class="product__item__price">
                                     <f>Genshin Impact : Summer Bombin Klee</f>
@@ -525,7 +495,8 @@
 
                             <div class="product__item">
                                 <a href="">
-                                    <img src="asset/img/product/17Cm-Genshin-T-c-ng-Klee-Hibana-Hi-p-S-Anime-H-nh-1-7-Quy.jpg_Q90.jpg_.jpg" alt="">
+                                    <img src="<c:url value = '/template/web/img/product/28cm-Anime-Genshin-Impact-Figure-Hu-Tao-Figure-Hutao-Action-Figures-Collection-Model-Figurine-Doll-Toys.jpg_Q90.jpg_.jpg'/>" alt="">
+                <!--                     <img src="asset/img/product/17Cm-Genshin-T-c-ng-Klee-Hibana-Hi-p-S-Anime-H-nh-1-7-Quy.jpg_Q90.jpg_.jpg" alt=""> -->
                                 </a>
                                 <div class="product__item__price">
                                     <f>Genshin Impact : Summer Bombin Klee</f>
@@ -546,7 +517,8 @@
 
                             <div class="product__item">
                                 <a href="">
-                                    <img src="asset/img/product/17Cm-Genshin-T-c-ng-Klee-Hibana-Hi-p-S-Anime-H-nh-1-7-Quy.jpg_Q90.jpg_.jpg" alt="">
+                                    <img src="<c:url value = '/template/web/img/product/28cm-Anime-Genshin-Impact-Figure-Hu-Tao-Figure-Hutao-Action-Figures-Collection-Model-Figurine-Doll-Toys.jpg_Q90.jpg_.jpg'/>" alt="">
+    <!--                                 <img src="asset/img/product/17Cm-Genshin-T-c-ng-Klee-Hibana-Hi-p-S-Anime-H-nh-1-7-Quy.jpg_Q90.jpg_.jpg" alt=""> -->
                                 </a>
                                 <div class="product__item__price">
                                     <f>Genshin Impact : Summer Bombin Klee</f>
@@ -596,35 +568,4 @@
             </div>
         </div>
 
-
-        <div class="footer">
-            <div class="footer__top">
-                <span>Follow Figurin on Instagram</span>
-                @figurin.vnn
-            </div>
-            <div class="footer__mid">
-                <div class="footer__mid__img hover--style1">
-                    <img src="asset/img/footer/gallery_item_1_img.webp">
-                </div>
-                <div class="footer__mid__img hover--style1">
-                    <img src="asset/img/footer/gallery_item_2_img.webp">
-                </div>
-                <div class="footer__mid__img hover--style1">
-                    <img src="asset/img/footer/gallery_item_3_img.webp">
-                </div>
-                <div class="footer__mid__img hover--style1">
-                    <img src="asset/img/footer/gallery_item_4_img.jpg">
-                </div>
-                <div class="footer__mid__img hover--style1">
-                    <img src="asset/img/footer/gallery_item_5_img.jpg">
-                </div>
-                <div class="footer__mid__img hover--style1">
-                    <img src="asset/img/footer/gallery_item_6_img.jpg">
-                </div>
-            </div>
-
-            <div class="footer__bot"></div>
-        </div>
-    </div>
 </body>
-</html>
