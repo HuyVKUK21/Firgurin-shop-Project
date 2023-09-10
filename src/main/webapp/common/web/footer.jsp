@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@include file="/common/taglib.jsp"%>
     
     <div class="footer">
             <div class="footer__top">
@@ -8,22 +10,28 @@
             </div>
             <div class="footer__mid">
                 <div class="footer__mid__img hover--style1">
-                    <img src="asset/img/footer/gallery_item_1_img.webp">
+                 <img src="<c:url value = '/template/web/img/footer/gallery_item_1_img.webp'/>" alt="">
+               <!--      <img src="asset/img/footer/gallery_item_1_img.webp"> -->
                 </div>
                 <div class="footer__mid__img hover--style1">
-                    <img src="asset/img/footer/gallery_item_2_img.webp">
+                <img src="<c:url value = '/template/web/img/footer/gallery_item_2_img.webp'/>" alt="">
+                    <!-- <img src="asset/img/footer/gallery_item_2_img.webp"> -->
                 </div>
                 <div class="footer__mid__img hover--style1">
-                    <img src="asset/img/footer/gallery_item_3_img.webp">
+                    <!-- <img src="asset/img/footer/gallery_item_3_img.webp"> -->
+                    <img src="<c:url value = '/template/web/img/footer/gallery_item_3_img.webp'/>" alt="">
                 </div>
                 <div class="footer__mid__img hover--style1">
-                    <img src="asset/img/footer/gallery_item_4_img.jpg">
+                   <!--  <img src="asset/img/footer/gallery_item_4_img.jpg"> -->
+                   <img src="<c:url value = '/template/web/img/footer/gallery_item_4_img.jpg'/>" alt="">
                 </div>
                 <div class="footer__mid__img hover--style1">
-                    <img src="asset/img/footer/gallery_item_5_img.jpg">
+                    <!-- <img src="asset/img/footer/gallery_item_5_img.jpg"> -->
+                    <img src="<c:url value = '/template/web/img/footer/gallery_item_5_img.jpg'/>" alt="">
                 </div>
                 <div class="footer__mid__img hover--style1">
-                    <img src="asset/img/footer/gallery_item_6_img.jpg">
+                  <!--   <img src="asset/img/footer/gallery_item_6_img.jpg"> -->
+                  <img src="<c:url value = '/template/web/img/footer/gallery_item_6_img.jpg'/>" alt="">
                 </div>
             </div>
 

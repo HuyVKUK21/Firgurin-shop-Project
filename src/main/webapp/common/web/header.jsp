@@ -1,9 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@include file="/common/taglib.jsp"%>
 
 <div class="navbar">
 	<div class="navbar__top">
-		<img class="li-text" src="asset/img/logo.webp" alt="">
+	<img class="li-text" src="<c:url value = '/template/web/img/logo.webp'/>" alt="">
 		<div class="navbar__search li-text">
 			<input type="text">
 			<button>

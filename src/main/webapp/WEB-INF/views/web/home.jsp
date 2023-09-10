@@ -1,4 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@include file="/common/taglib.jsp"%>
 <!DOCTYPE html>
 
 <html>
@@ -311,8 +313,8 @@
                 <b>Sản phẩm order</b>
                 <span>Những sản phẩm đã hoặc sắp phát hành & cần đặt trước</span>
                 <div class="cata__box">
-                 <img src="<c:url value = '/template/web/img/home/home_collection_1_banner.web'/>" alt="">
-             <!--        <img src="asset/img/home/home_collection_1_banner.webp" alt=""> -->
+                 <img src="<c:url value = '/template/web/img/home/home_collection_1_banner.webp'/>" alt="">
+                
                     <div class="cata__contain">
                         <div class="cata__navigate">
                             <div class="cata--button cata--left">
