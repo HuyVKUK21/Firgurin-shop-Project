@@ -39,7 +39,7 @@
         <div class="colection">
             <div class="collection__content li-text">
                 <div class="collection__content__left">
-                    <span>Bộ sưu tập</span>
+                    <span>${tbl_product.size() }</span>
                     <b>Nedoroid</b>
                     <span>
                         Dòng chibi figure được yêu thích nhất,
