@@ -1,28 +1,143 @@
-.about {
-    padding-top: 50px;
-    border-top: solid 1px rgb(214, 214, 214);
+.title {
     width: 100%;
-    font-size: 3rem;
-    margin-bottom: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 50px;
 }
 
-.about a {
-    font-size: 1.5rem;
-    margin-left: 20px;
+.title b {
+    font-size: 3rem;
+}
+
+.title b::after {
+    content: "";
+    position: relative;
+    margin: auto;
+    display: block;
+    top: 30px;
+    width: 35%;
+    height: 5px;
+    background-color: rgb(32, 32, 32);
+
 }
 
 .info {
+    margin-top: 50px;
+    display: flex;
     width: 100%;
-    padding: 0 20vw;
+    /* height: 350px; */
     font-size: 2rem;
+    justify-content: center;
+    padding: 0 5vw;
+}
+
+.left {
+    width: 300px;
+    /* background-color: rgb(187, 0, 255); */
+    display: flex; flex-direction: column;
+    gap: 10px;
+}
+
+.left ul {
+    padding: 0 20px;
+    font-size: 1.6rem;
+}
+
+.left ul li {
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+}
+
+.left ul li:hover {
+    font-weight: bold;
+}
+
+.right {
+    width: 1000px;
+    /* background-color: red; */
+}
+
+.right__info {
     display: flex; flex-direction: column;
     gap: 20px;
 }
 
-.info b {
-    border-bottom: solid 1px rgb(217, 217, 217);
-    padding-bottom: 20px;
+.right__info span {
+    font-size: 1.8rem;
+}
+
+.right__info input {
+    width: 30%;
+    padding: 5px 10px;
+    outline: none;
+    border: 0.5px solid rgb(196, 196, 196);
+    transition: all 0.3s ease-out;
+}
+
+.right__info input:focus {
+    width: 35%;
+}
+
+.right__info b::after {
+    content: "";
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+    height: 0.5px;
+    background-color: rgb(225, 225, 225);
+}
+
+.right__info b i {
+    margin-left: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+}
+
+.right__info b i:hover {
+    color: red;
+}
+
+.right__info button {
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: rgb(45, 45, 45);
+    color: rgb(255, 255, 255);
+    font-size: 1.6rem;
+    padding: 10px 20px;
+    border: none;
+}
+
+.right--info {
+    display: flex;
+}
+
+.right--change {
+    display: none;
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+
+.change {
+    font-size: 1.6rem;
+}
+
+.change a {
+    font-size: 2rem;
+}
+
+@media screen and (max-width :840px) {
+    .info {
+        flex-direction: column;
+        margin-top: 80px;
+        margin-bottom: 100px;
+    }
 }

@@ -95,7 +95,15 @@
     margin-bottom: 20px;
     display: flex;
 }
-
+.product__name{
+    font-weight: 800;
+}
+.related__span{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 45px;
+}
 .buy__ammount {
     display: flex;
     width: 170px;
@@ -147,8 +155,15 @@
     color: var(--main-red);
 }
 
+.btn--form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
 .price__button__add2 {
     border: solid 1px var(--main-red);
+    height: 100%;
     padding: 2px 0;
     width: 100%;
     margin-left: 50px;
@@ -175,7 +190,10 @@
     margin-bottom: 20px;
     line-height: 25px;
 }
-
+span.product__highlight {
+    font-weight: 700;
+    color: green;
+}
 .product__detail {
     margin-top: 20px;
     font-size: 1.5rem;
@@ -262,16 +280,41 @@
     margin-bottom: 20px;
 }
 
-.price__button {
-    transition: all ease-out 0.3s;
-    transform: translateY(30px);
-    width: 100%; height: 40px;
-    background-color: black;
-    border-radius: 10px;
-    display: flex;
-    font-size: 1.4rem;
-    align-items: center;
-    padding: 2px 2px;
+.price__button form:first-child {
+    height: 100%;
+    flex: 1.5;
+}
+
+.price__button form:last-child {
+    height: 100%;
+    flex: 1;
+}
+
+.price__button__add {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    flex: 1.5;
+    text-align: center;
+    background-color: transparent;
+    color: white;
+    border-radius: 8px;
+    border: 0;
+    z-index: 2;
+}
+
+.price__button__buy {
+    height: 100%;
+    width: 100%;
+    transition: all ease-out 0.1s;
+    position: relative;
+    flex: 1;
+    height: 100%;
+    color: black;
+    text-align: center;
+    background-color: white;
+    border-radius: 8px;
+    border: 0;
 }
 
 .price__button--hover::before {

@@ -23,11 +23,6 @@
                     <i class="fa-solid fa-chevron-right"></i>
                 </div>
             </div>
-<!--             <img class="banner-slide" src="asset/img/home/slide_1_img.webp" style="display: block;" alt="">
-            <img class="banner-slide" src="asset/img/home/slide_2_img.webp" alt="">
-            <img class="banner-slide" src="asset/img/home/slide_3_img.webp" alt="">
-            <img class="banner-slide" src="asset/img/home/slide_4_img.webp" alt="">
-            <img class="banner__img" src="asset/img/home/slide_1_img.webp" alt=""> -->
             
             <img class="banner-slide" src="<c:url value = '/template/web/img/home/slide_1_img.webp'/>" style="display: block;" alt="">
             <img class="banner-slide" src="<c:url value = '/template/web/img/home/slide_2_img.webp'/>" alt="">
@@ -67,6 +62,7 @@
             </div>
         </div>
 
+
         <div class="content">
 
             <div class="catalog">
@@ -74,7 +70,6 @@
                 <span>Những sản phẩm đã hoặc sắp phát hành & cần đặt trước</span>
                 <div class="cata__box order">
                 <img src="<c:url value = '/template/web/img/home/home_collection_1_banner.webp'/>" alt="">
-                   <!--  <img src="asset/img/home/home_collection_1_banner.webp" alt=""> -->
                     <div class="cata__contain">
                         <div class="cata__navigate">
                             <div class="cata--button cata--left">
@@ -85,14 +80,15 @@
                             </div>
                         </div>
                         <div class="product">
-                            <div class="product__item">
+                 
+                        	    <c:forEach items="${ tbl_product }" var = "product">
+                        <div class="product__item">
                                 <a href="">
-                                 <img src="<c:url value = '/template/web/img/product/28cm-Anime-Genshin-Impact-Figure-Hu-Tao-Figure-Hutao-Action-Figures-Collection-Model-Figurine-Doll-Toys.jpg_Q90.jpg_.jpg'/>" alt="">
-                                    <!-- <img src="asset/img/product/28cm-Anime-Genshin-Impact-Figure-Hu-Tao-Figure-Hutao-Action-Figures-Collection-Model-Figurine-Doll-Toys.jpg_Q90.jpg_.jpg" alt=""> -->
+                                 <img src="<c:url value = '/template/web/img/product/${product.product_image}  '/>" alt="">
                                 </a>
                                 <div class="product__item__price">
-                                    <f>Genshin Impact : Fire Dance Hutao Limited</f>
-                                    <span>2.400.000₫</span>
+                                    <f>${product.product_name }</f>
+                                    <span>${product.product_price }</span>
                                     <div class="price__button">
                                         <button class="price__button__add price__button--hover">
                                             <i class="fa-solid fa-cart-shopping"></i>
@@ -105,8 +101,12 @@
                                     </div>
                                 </div>
                             </div>
+                        </c:forEach>
+                   
+           
+    
             
-                            <div class="product__item">
+                         <%--    <div class="product__item">
                                 <a href="">
                                  <img src="<c:url value = '/template/web/img/product/17Cm-Genshin-T-c-ng-Klee-Hibana-Hi-p-S-Anime-H-nh-1-7-Quy.jpg_Q90.jpg_.jpg'/>" alt="">
                                     <!-- <img src="asset/img/product/17Cm-Genshin-T-c-ng-Klee-Hibana-Hi-p-S-Anime-H-nh-1-7-Quy.jpg_Q90.jpg_.jpg" alt=""> -->
@@ -300,7 +300,7 @@
 
 
                             <div class="product__item"></div>
-                            <div class="product__item"></div>
+                            <div class="product__item"></div> --%>
     
                         </div>
                     </div>
@@ -325,14 +325,14 @@
                             </div>
                         </div>
                         <div class="product">
-                            <div class="product__item">
+                             <c:forEach items="${ tbl_product }" var = "product">
+                        <div class="product__item">
                                 <a href="">
-                                  <img src="<c:url value = '/template/web/img/product/28cm-Anime-Genshin-Impact-Figure-Hu-Tao-Figure-Hutao-Action-Figures-Collection-Model-Figurine-Doll-Toys.jpg_Q90.jpg_.jpg'/>" alt="">
-<!--                                     <img src="asset/img/product/28cm-Anime-Genshin-Impact-Figure-Hu-Tao-Figure-Hutao-Action-Figures-Collection-Model-Figurine-Doll-Toys.jpg_Q90.jpg_.jpg" alt=""> -->
+                                 <img src="<c:url value = '/template/web/img/product/${product.product_image}  '/>" alt="">
                                 </a>
                                 <div class="product__item__price">
-                                    <f>Genshin Impact : Fire Dance Hutao Limited</f>
-                                    <span>2.400.000₫</span>
+                                    <f>${product.product_image}</f>
+                                    <span>${product.product_price }</span>
                                     <div class="price__button">
                                         <button class="price__button__add price__button--hover">
                                             <i class="fa-solid fa-cart-shopping"></i>
@@ -345,8 +345,9 @@
                                     </div>
                                 </div>
                             </div>
+                        </c:forEach>
             
-                            <div class="product__item">
+                       <%--      <div class="product__item">
                                 <a href="">
                                     <img src="<c:url value = '/template/web/img/product/28cm-Anime-Genshin-Impact-Figure-Hu-Tao-Figure-Hutao-Action-Figures-Collection-Model-Figurine-Doll-Toys.jpg_Q90.jpg_.jpg'/>" alt="">
                                   <!--   <img src="asset/img/product/17Cm-Genshin-T-c-ng-Klee-Hibana-Hi-p-S-Anime-H-nh-1-7-Quy.jpg_Q90.jpg_.jpg" alt=""> -->
@@ -540,7 +541,7 @@
 
 
                             <div class="product__item"></div>
-                            <div class="product__item"></div>
+                            <div class="product__item"></div> --%>
     
                         </div>
                     </div>

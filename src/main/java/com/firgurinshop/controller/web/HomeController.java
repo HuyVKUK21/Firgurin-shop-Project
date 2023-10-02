@@ -9,14 +9,12 @@ import org.springframework.web.servlet.ModelAndView;
 import com.firgurinshop.Services.user.HomeServiceImplement;
 
 @Controller(value = "homeControllerOfWeb")
-public class HomeController {
-	@Autowired
-	HomeServiceImplement homeService;
-	
+public class HomeController extends BaseController{
 	@RequestMapping(value = "/trang-chu", method = RequestMethod.GET)
 	public ModelAndView homePage() {
-		ModelAndView mav = new ModelAndView("web/home");
-		mav.addObject("tbl_product", homeService.getDataProduct());
-		return mav;
+		_mvShare.addObject("tbl_product", _homeService.getDataProduct());
+		_mvShare.setViewName("web/home");
+		return _mvShare;
 	}
+
 }

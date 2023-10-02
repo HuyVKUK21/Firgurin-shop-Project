@@ -126,7 +126,9 @@ body {
 }
 
 .login a {
-    align-self: flex-end;;
+	 color: black;
+    align-self: flex-end;
+   
 }
 
 .price__button--hover::before {
@@ -250,7 +252,22 @@ body {
     padding: 10px 20px;
 }
 
+.register__part img {
+    width: 40%;
+}
+
+
+.register__part span {
+    margin-bottom: 0;
+}
+
 .forgot__btn {
     text-decoration: underline;
     cursor: pointer;
+}
+
+.text-alert {
+    position: absolute;
+    top: 294px;
+    font-size: 1.2rem;
 }

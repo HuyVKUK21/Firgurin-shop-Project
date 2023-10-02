@@ -30,7 +30,7 @@
 			</div>
 			<div class="navbar__top__item__right">
 				<div class="navbar__top__acc li-text">
-					<a href=""> <i class="fa-regular fa-user"></i> <span
+					<a href="/firgure-shop/login"> <i class="fa-regular fa-user"></i> <span
 						class="navbar__item-span">Đăng nhập / Đăng kí</span>
 					</a>
 				</div>
