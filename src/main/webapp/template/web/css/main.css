@@ -283,6 +283,7 @@ a.dropdown_select{
 /* Product */
 
 .product {
+	height: 825px;
     margin-top: 50px;
     width: 1200px;
     display: grid;
@@ -290,11 +291,12 @@ a.dropdown_select{
     grid-gap: 30px;
 }
 
+
 .product__item {
     position: relative;
     width: auto; height: 400px;
     background-color: red;
-    display: flex;
+    display: none;
     overflow: hidden;
 }
 
@@ -441,5 +443,37 @@ a.dropdown_select{
     border: 0;
 }
 
+
+.pagination {
+  
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    font-size: 1.8rem;
+    margin-top: 20px;
+    padding: 0;
+    align-items: center;
+}
+
+.pagination li a {
+    text-decoration: none;
+    color: black;
+}
+
+.pagination li {
+	margin-right: 10px;
+    margin-left: 100px;
+    color: black;
+    background-color: white;
+    box-shadow: 0px 0px 15px rgb(222 222 222);
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    transition: all cubic-bezier(.09,.66,.39,.88) 0.3s;
+}
 
 

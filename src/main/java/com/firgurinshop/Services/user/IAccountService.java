@@ -13,5 +13,5 @@ public interface IAccountService {
 	@Autowired
 	public int AddAccount(User user);
 	@Autowired
-	public boolean CheckAccount(User user);
+	public User CheckAccount(User user);
 }

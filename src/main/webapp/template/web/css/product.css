@@ -206,6 +206,8 @@ span.product__highlight {
 }
 
 .related {
+	width: 1120px;
+	margin: auto;
     margin-top: 60px;
     display: grid;
     place-content: center;
@@ -217,9 +219,9 @@ span.product__highlight {
 }
 
 .product2 {
-    margin: auto;
     height: 350px;
-    display: grid;
+    white-space: nowrap;
+    display: inline-flex;
     gap: 30px;
     grid-template-columns: repeat(5, 1fr);
     transition: all cubic-bezier(.59,-0.01,.34,1) 0.5s;

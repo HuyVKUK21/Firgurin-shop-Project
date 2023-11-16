@@ -40,7 +40,8 @@
 						figure nào!</span> 
 						<!-- <input class="regis--user" type="text"
 						placeholder="Tài khoản">  -->
-						<form:input type="text" class="regis--user" placeholder="Tài khoản" path="user_name"/>
+						<form:input type="email" class="regis--gmail" placeholder="Email người dùng" path="user_email"/>
+						<form:input type="text" class="regis--user" placeholder="Tên người dùng" path="user_name"/>
 						<!-- <input class="regis--pass"
 						type="password" placeholder="Mật khẩu"> --> 
 							<form:input type="password" class="regis--pass" placeholder="Mật khẩu" path="user_password"/>
@@ -49,7 +50,7 @@
 					
 					<!-- 	<input
 						class="regis--gmail" type="text" placeholder="Gmail" value=""> -->
-						<form:input type="email" class="regis--gmail" placeholder="Email" path="user_email"/>
+						
 
 					<button type="submit"
 						class="price__button__add price__button--hover li-text regis--btn">

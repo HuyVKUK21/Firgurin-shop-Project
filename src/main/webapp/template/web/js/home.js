@@ -3,7 +3,48 @@ const button_left = document.querySelector('.button__left');
 const button_right = document.querySelector('.button__right');
 const cata_left = document.querySelectorAll('.cata--button');
 const productt = document.querySelectorAll('.product');
+ var itemProducts = document.querySelectorAll(".product__item");
 
+ var itemsPerPage = 10;
+ var currentPage = 1;
+
+
+  function hideAllItems() {
+            itemProducts.forEach(function (item) {
+                item.style.display = "none";
+            });
+        }
+
+function showItemsOnPage() {
+            hideAllItems();
+            var startIndex = (currentPage - 1) * itemsPerPage;
+            var endIndex = startIndex + itemsPerPage;
+            for (var i = startIndex; i < endIndex; i++) {
+                if (itemProducts[i]) {
+                    itemProducts[i].style.display = "flex";
+                }
+            }
+        }
+
+  function previousPage() {
+            if (currentPage > 1) {
+                currentPage--;
+                showItemsOnPage();
+                updatePagination();
+            }
+        }
+
+  function nextPage() {
+            var totalPages = Math.ceil(itemProducts.length / itemsPerPage);
+            if (currentPage < totalPages) {
+                currentPage++;
+                showItemsOnPage();
+                updatePagination();
+            }
+        }
+
+   		showItemsOnPage();
+        updatePagination();
 // d = 0;
 // cata_left.forEach(el => {
 //     d++;

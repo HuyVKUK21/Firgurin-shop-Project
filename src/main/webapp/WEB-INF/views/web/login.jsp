@@ -28,9 +28,10 @@
 		<div class="box">
 			<form:form action="login" method="POST" modelAttribute="user">
 				<div class="login__box login__part">
+				<p>${ status_login }</p>
 					<img src="<c:url value = '/template/web/img/logo.webp'/>" alt="">
-					<b>Chào mừng quay lại!</b> <span>Chúng tôi nhớ bạn lắm rồi đấy!</span> 
-						<form:input type="text" placeholder="Tài khoản" path="user_name"/>
+					<b>Chào mừng quay lại</b> <span>Chúng tôi nhớ bạn lắm rồi đấy!</span> 
+						<form:input type="text" placeholder="Nhập Email người dùng" path="user_email"/>
 						<form:input type="password" placeholder="Mật khẩu" path="user_password"/>
 					<a href="/firgure-shop/forgot-password" class="forgot__btn">Quên
 						mật khẩu?</a>

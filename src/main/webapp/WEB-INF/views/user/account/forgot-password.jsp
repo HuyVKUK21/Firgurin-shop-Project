@@ -33,7 +33,7 @@
                     <b>Quên mật khẩu à?</b>
                     <span>Nhạp vào đây gmail của bạn!</span>
 
-                    <input class="regis--gmail" type="text" placeholder="Gmail" value="">
+                    <input class="regis--gmail" type="text" placeholder="Nhập email người dùng vào đây" value="">
     
                     <button class="price__button__add price__button--hover li-text regis--btn">
                         <span>Tiếp theo</span>

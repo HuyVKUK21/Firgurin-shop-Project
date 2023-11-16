@@ -8,5 +8,25 @@
 		<pattern>/home</pattern>
 	</decorator>
 
+	<decorator name = "infomation" page = "web.jsp">
+		<pattern>/infomation</pattern>
+	</decorator>
+
+	<decorator name = "contact" page = "web.jsp">
+		<pattern>/contact</pattern>
+	</decorator>
+		
+<decorator name="detail-product" page="web.jsp">
+    <pattern>/detail-product/*</pattern>
+</decorator>
+
+<decorator name="cart" page="web.jsp">
+    <pattern>/cart</pattern>
+</decorator>
+
+<decorator name="product-portfolio" page="web.jsp">
+    <pattern>/product-portfolio/*</pattern>
+</decorator>
+
 
 </decorators>

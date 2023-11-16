@@ -12,10 +12,24 @@ import com.firgurinshop.Entity.Product;
 
 @Repository
 public class ProductDao extends BaseDao {
-
 	public List<Product> getDataProduct() {
 		List<Product> list = new ArrayList<Product>();
 		String sql = "SELECT * FROM tbl_product";
+		list = _jdbcTemplate.query(sql, new MapperProduct());
+		return list;
+	}
+	
+	
+	public List<Product> getDataDetailProduct(String id) {
+		List<Product> list = new ArrayList<Product>();
+		String sql = "SELECT * FROM tbl_product WHERE product_id = " + id;
+		list = _jdbcTemplate.query(sql, new MapperProduct());
+		return list;
+	}
+	
+	public List<Product> getDataDetailProductPortfolio(String id) {
+		List<Product> list = new ArrayList<Product>();
+		String sql = "SELECT * FROM tbl_product WHERE category_id = " + id;
 		list = _jdbcTemplate.query(sql, new MapperProduct());
 		return list;
 	}
