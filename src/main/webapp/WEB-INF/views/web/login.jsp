@@ -10,7 +10,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="shortcut icon" type="image/x-icon"
-	href="frontend/img/our-damn-logo.ico" sizes="32x32" />
+	href="template/img/our-damn-logo.ico" sizes="32x32" />
 <link rel="stylesheet"
 	href="<c:url value = 'template/web/css/navbar.css'/>">
 <link rel="stylesheet"

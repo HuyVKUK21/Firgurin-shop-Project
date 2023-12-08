@@ -252,7 +252,7 @@
     width: 1400px;
     height: 650px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     grid-gap: 20px;
     translate: 0px;
     transition: all cubic-bezier(.59,-0.01,.34,1) 0.5s;

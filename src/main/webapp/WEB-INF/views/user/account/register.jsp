@@ -47,9 +47,6 @@
 							<form:input type="password" class="regis--pass" placeholder="Mật khẩu" path="user_password"/>
 						<input class="regis--pass2" type="password"
 						placeholder="Xác nhận mật khẩu"> 
-					
-					<!-- 	<input
-						class="regis--gmail" type="text" placeholder="Gmail" value=""> -->
 						
 
 					<button type="submit"

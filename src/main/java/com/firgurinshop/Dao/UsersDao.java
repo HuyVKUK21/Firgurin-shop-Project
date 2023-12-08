@@ -9,13 +9,14 @@ import com.firgurinshop.Entity.User;
 public class UsersDao extends BaseDao{
 	public int AddAccount(User user) {
 		StringBuffer  sql = new StringBuffer();
-		sql.append("INSERT INTO tbl_user (user_email, user_password, user_name, user_phone, user_address, created_at, updated_at, verified) ");
+		sql.append("INSERT INTO tbl_user (user_email, user_password, user_name, user_phone, user_address, role, created_at, updated_at, verified) ");
 		sql.append("VALUES ( ");
 		sql.append("	'"+user.getUser_email()+"', ");
 		sql.append("    '"+user.getUser_password()+"', ");
 		sql.append("    '"+user.getUser_name()+"', ");
 		sql.append("    '"+user.getUser_phone()+"', ");
 		sql.append("    NULL, ");
+		sql.append("    0, ");
 		sql.append("    NULL, ");
 		sql.append("    NULL, ");
 		sql.append("    1 ");

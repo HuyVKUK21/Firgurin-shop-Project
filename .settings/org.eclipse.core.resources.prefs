@@ -1,3 +1,16 @@
 eclipse.preferences.version=1
+encoding//src/main/webapp/WEB-INF/views/admin/brand/AddBrand.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/admin/brand/AllBrand.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/admin/brand/EditBrand.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/admin/category-product/AddCategory.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/admin/category-product/AllCategory.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/admin/category-product/EditCategory.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/admin/order-product/order-management.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/admin/order-product/view-order.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/admin/product/EditProduct.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/admin/product/addproduct.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/admin/product/allproduct.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/views/web/contact.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/views/web/login.jsp=UTF-8
+encoding//src/main/webapp/common/admin/footer.jsp=UTF-8
+encoding//src/main/webapp/common/admin/header.jsp=UTF-8

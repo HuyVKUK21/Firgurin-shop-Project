@@ -7,6 +7,7 @@ public class User {
 	private String user_name;
 	private int user_phone;
 	private String user_address;
+	private int role;
 	private String created_at;
 	private String updated_at;
 	private int verified;
@@ -46,6 +47,12 @@ public class User {
 	}
 	public void setUser_address(String user_address) {
 		this.user_address = user_address;
+	}
+	public int getRole() {
+		return role;
+	}
+	public void setRole(int role) {
+		this.role = role;
 	}
 	public String getCreated_at() {
 		return created_at;

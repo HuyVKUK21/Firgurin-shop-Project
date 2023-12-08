@@ -1,5 +1,8 @@
 package com.firgurinshop.Entity;
 
+import javax.persistence.Table;
+
+
 public class Brand {
 	private int brand_id;
 	private String brand_name;

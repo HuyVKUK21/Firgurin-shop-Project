@@ -14,9 +14,17 @@
 <div class="content">
 	<div class="collection">
 
-		<c:forEach items="${ tbl_category_product }" var="category">
-			<span>${category.category_name }</span>
-		</c:forEach>
+
+		<c:if test="${empty all_product}">
+			<c:forEach items="${ tbl_category_product }" var="category">
+				<span>${category.category_name }</span>
+				<span>${all_product }</span>
+			</c:forEach>
+		</c:if>
+		<c:if test="${not empty all_product}">
+			<span>${all_product }</span>
+		</c:if>
+
 
 		<div class="collection__categ collection__categ--mobile li-text">
 			<i class="fa-solid fa-angle-down"></i> Sắp xếp
@@ -28,9 +36,11 @@
 					<li><i class="fa-solid fa-check"></i> Giá: Tăng giảm</li>
 					<li><i class="fa-solid fa-check"></i> Tên: A-Z</li>
 					<li><i class="fa-solid fa-check"></i> Tên: Z-A</li>
-					<li><i class="fa-solid fa-check"></i> Cũ nhất</li>
-					<li><i class="fa-solid fa-check"></i> Mới nhất</li>
 					<li><i class="fa-solid fa-check"></i> Bán chạy nhất</li>
+
+
+
+
 				</ul>
 			</div>
 		</div>
@@ -53,12 +63,16 @@
 
 				<c:forEach items="${tbl_brand_product }" var="brand">
 					<ul>
-						<li><label> <a class="dropdown_select"
-								href="{{URL::to('/thuong-hieu/'.$brand_pro->brand_id)}}"> <span>${brand.brand_name }</span>
-							</a>
+						<li><label>
+
+								<form action="/firgure-shop/product-portfolio/all" method="GET">
+									<button name="tradeMark" class="dropdown_select"
+										value="${brand.brand_id }">${brand.brand_name }</button>
+								</form> </a>
 						</label></li>
 					</ul>
 				</c:forEach>
+
 			</div>
 		</div>
 
@@ -92,7 +106,7 @@
 			Tỉ lệ <i class="fa-solid fa-arrow-down"></i>
 			<div class="filler__box">
 				<ul>
-					<li><label> <input type="radio" name="scale" checked>
+					<!-- <li><label> <input type="radio" name="scale" checked>
 							Mọi tỉ lệ
 					</label></li>
 					<li><label> <input type="radio" name="scale">
@@ -118,7 +132,19 @@
 					</label></li>
 					<li><label> <input type="radio" name="scale">
 							Non-scale
-					</label></li>
+					</label></li> -->
+
+					<c:forEach items="${tbl_product_size }" var="product">
+						<ul>
+							<li><label>
+
+									<form action="/firgure-shop/product-portfolio/all" method="GET">
+										<button name="productSize" class="dropdown_select"
+											value="${product.product_size }">${product.product_size}</button>
+									</form> </a>
+							</label></li>
+						</ul>
+					</c:forEach>
 				</ul>
 			</div>
 		</div>
@@ -229,50 +255,51 @@
 
 	</div>
 
-	<div class="product">
-		<c:forEach items="${ tbl_product_portfolio }" var="portfolio">
-			<div class="product__item">
-				<a href="/firgure-shop/detail-product/${portfolio.product_id }">
+	<c:if test="${not empty tbl_product_portfolio }">
+		<div class="product">
 
-					<img
-					src="<c:url value = '/template/web/img/product/${portfolio.product_image }'/>"
-					alt="">
-				</a>
-				<div class="product__item__price">
-					<f title="${portfolio.product_name }">${portfolio.product_name}</f>
-					<span><fmt:formatNumber value="${portfolio.product_price}"
-							type="currency" currencyCode="VND" /></span>
-					<div class="price__button">
-						<form action="{{URL::to('/save-cart')}}" method="POST">
-							<input name="productID_hidden" type="hidden"
-								value="{{$product->product_id}}" /> <input
-								class="ammount-input" name="qty" type="hidden" value="1">
-							<button class="price__button__add price__button--hover">
-								<i class="fa-solid fa-cart-shopping"></i> <span>Thêm vào
-									giỏ</span>
-							</button>
-						</form>
-						<form
-							action="{{URL::to('/chi-tiet-san-pham/'.$product->product_id)}}"
-							method="GET">
-							<button class="price__button__buy price__button--hover">
-								<i class="fa-solid fa-bag-shopping"></i> <span>Mua ngay</span>
-							</button>
-						</form>
+			<c:forEach items="${ tbl_product_portfolio }" var="portfolio">
+				<div class="product__item">
+					<a href="/firgure-shop/detail-product/${portfolio.product_id }">
+						<img
+						src="<c:url value = '/template/web/img/product/${portfolio.product_image }'/>"
+						alt="">
+					</a>
+					<div class="product__item__price">
+						<f title="${portfolio.product_name }">${portfolio.product_name}</f>
+						<span><fmt:formatNumber value="${portfolio.product_price}"
+								type="currency" currencyCode="VND" /></span>
+						<div class="price__button">
+							<form action="{{URL::to('/save-cart')}}" method="POST">
+								<input name="productID_hidden" type="hidden"
+									value="{{$product->product_id}}" /> <input
+									class="ammount-input" name="qty" type="hidden" value="1">
+								<button class="price__button__add price__button--hover">
+									<i class="fa-solid fa-cart-shopping"></i> <span>Thêm vào
+										giỏ</span>
+								</button>
+							</form>
+							<form
+								action="{{URL::to('/chi-tiet-san-pham/'.$product->product_id)}}"
+								method="GET">
+								<button class="price__button__buy price__button--hover">
+									<i class="fa-solid fa-bag-shopping"></i> <span>Mua ngay</span>
+								</button>
+							</form>
+						</div>
 					</div>
 				</div>
-			</div>
+			</c:forEach>
+
+		</div>
+	</c:if>
+
+	<c:if test="${empty tbl_product_portfolio }">
+		<h1 style="padding: 80px;">Sản phẩm hiện tại bạn đang phân loại
+			đã hết hàng! Vui lòng chọn sản phẩm khác</h1>
+	</c:if>
 
 
-		</c:forEach>
-		
-		
-
-<!-- 		<button onclick="previousPage()">Previous</button>
-		<button onclick="nextPage()">Next</button>
- -->
-
-	</div>
 	<div class="pull-right pagination">
 		<ul class="pagination">
 
@@ -281,9 +308,9 @@
 
 
 
-			<li onclick="nextPage()"> <span><i
-						class="fa fa-angle-double-right"></i></span>
-			</a></li>
+			<li onclick="nextPage()"><span><i
+					class="fa fa-angle-double-right"></i></span> </a></li>
 		</ul>
 	</div>
 </div>
+

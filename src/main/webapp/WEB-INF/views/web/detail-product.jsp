@@ -5,13 +5,13 @@
 
 <c:forEach items="${tbl_detail_product }" var="detail_product">
 	<title>${detail_product.product_name }</title>
-	</c:forEach>
+</c:forEach>
 
 
 <link rel="stylesheet" type="text/css"
 	href="${pageContext.request.contextPath}/template/web/css/product.css">
-	
-	
+
+
 
 
 
@@ -19,10 +19,11 @@
 <div class="directory">
 	<a href="/firgure-shop">Trang chủ</a>
 	<c:forEach items="${ tbl_category_product }" var="category">
-	<a href="/firgure-shop/product-portfolio/${category.category_id }"> ${category.category_name }</a>
+		<a href="/firgure-shop/product-portfolio/${category.category_id }">
+			${category.category_name }</a>
 	</c:forEach>
 	<c:forEach items="${tbl_detail_product }" var="detail_product">
-	<span class="product__name"> ${detail_product.product_name }</span>
+		<span class="product__name"> ${detail_product.product_name }</span>
 	</c:forEach>
 
 </div>
@@ -70,33 +71,81 @@
 					<f> <b>${detail_product.product_name }</b></f>
 					<f> <b><fmt:formatNumber
 							value="${detail_product.product_price}" type="currency"
-							currencyCode="VND" /></b></f>
+							currencyCode="VND" maxFractionDigits="0" pattern="#,### ₫"/></b></f>
 				</c:forEach>
 			</div>
 
-			<div class="product__buy">
-				<form class="btn--form" action="{{ URL::to('/save-cart') }}"
-					method="POST">
 
+			<c:if test="${empty LoginInfo }">
+				<div class="product__buy">
 					<div class="buy__ammount li-text">
-
-
 						<button type="button" class="ammount-sub" name="decqty">-</button>
 						<input class="ammount-input" name="qty" type="tel" size="1"
-							value='<?= $v_qty; ?>' />
+							value="1" path="quantity" />
 						<button type="button" class="ammount-add" name="incqty">+</button>
 					</div>
 
-					<input name="productID_hidden" type="hidden"
-						value="{{ $value->product_id }}" />
-
-					<button type="submit"
+					<button type="submit" 
 						class="price__button__add2 price__button--hover2  li-text">
-						<i class="fa-solid fa-cart-shopping"></i> <span>Thêm vào
-							giỏ</span>
+					
+						<i class="fa-solid fa-cart-shopping"></i> 
+							 <span>
+							 <a href="/firgure-shop/login">Thêm vào giỏ</a>
+							 </span>
+						
+
+
 					</button>
-				</form>
-			</div>
+
+				</div>
+			</c:if>
+
+			<c:if test="${not empty LoginInfo }">
+				<div class="product__buy">
+					<form:form class="btn--form" action="/firgure-shop/cart"
+						method="POST" modelAttribute="cart">
+						<c:forEach items="${tbl_detail_product }" var="detail_product">
+							<c:forEach items="${ tbl_category_product }" var="category">
+								<c:forEach items="${tbl_brand_product }" var="brand">
+									<div class="buy__ammount li-text">
+
+
+										<button type="button" class="ammount-sub" name="decqty">-</button>
+										<form:input class="ammount-input" name="qty" type="tel"
+											size="1" value="1" path="quantity" />
+										<button type="button" class="ammount-add" name="incqty">+</button>
+									</div>
+
+									<input name="productID_hidden" type="hidden"
+										value="${detail_product.product_id }" />
+
+									<form:input type="hidden" value="${detail_product.product_id }"
+										path="product_id" />
+									<form:input type="hidden" value="${category.category_id }"
+										path="category_id" />
+									<form:input type="hidden" value="${LoginInfo.user_id }"
+										path="user_id" />
+									<form:input type="hidden"
+										value="${detail_product.product_name }" path="product_name" />
+
+									<form:input type="hidden" value="${LoginInfo.user_email }"
+										path="user_email" />
+
+								</c:forEach>
+							</c:forEach>
+						</c:forEach>
+						<button type="submit" onclick="checkAndSubmit()"
+							class="price__button__add2 price__button--hover2  li-text">
+							<i class="fa-solid fa-cart-shopping"></i> <span>Thêm vào
+								giỏ</span>
+						</button>
+
+					</form:form>
+				</div>
+			</c:if>
+
+
+
 
 			<div class="product__rule">
 				<div class="rule">
@@ -125,18 +174,18 @@
 				<span><b>Thông tin sản phẩm</b></span>
 				<c:forEach items="${tbl_detail_product }" var="detail_product">
 					<c:forEach items="${ tbl_category_product }" var="category">
-					<c:forEach items="${tbl_brand_product }" var="brand">
-					<span class="product__highlight">${detail_product.product_price_update }
-							${detail_product.product_price }</span>
-						<span>Danh mục: ${ category.category_name }</span>
-						<span>Hãng sản xuất: ${brand.brand_name }</span>
-						<span>Nhân vật: ${detail_product.product_desc }</span>
-						<span>Series: ${detail_product.product_series }</span>
-						<span>Tỷ lệ: ${detail_product.product_proportion }</span>
-						<span>Kích thước: ${detail_product.product_size }</span>
-						<span>Ngày phát hành: ${detail_product.product_date }</span>
-					</c:forEach>
-						
+						<c:forEach items="${tbl_brand_product }" var="brand">
+							<span class="product__highlight">${detail_product.product_price_update }
+								${detail_product.product_price }</span>
+							<span>Danh mục: ${ category.category_name }</span>
+							<span>Hãng sản xuất: ${brand.brand_name }</span>
+							<span>Nhân vật: ${detail_product.product_desc }</span>
+							<span>Series: ${detail_product.product_series }</span>
+							<span>Tỷ lệ: ${detail_product.product_proportion }</span>
+							<span>Kích thước: ${detail_product.product_size }</span>
+							<span>Ngày phát hành: ${detail_product.product_date }</span>
+						</c:forEach>
+
 					</c:forEach>
 				</c:forEach>
 			</div>
@@ -146,15 +195,16 @@
 
 <div class="related">
 	<span class="related__span">Sản phẩm liên quan</span>
-	
-		<div class="cata__contain">
 
-			<div class="product2">
-				<c:forEach items="${tbl_product }" var="detail_product">
+	<div class="cata__contain">
+
+		<div class="product2">
+			<c:forEach items="${tbl_product }" var="detail_product">
 				<div class="product__item">
 
 
-					<a href="/firgure-shop/detail-product/${ detail_product.product_id }">
+					<a
+						href="/firgure-shop/detail-product/${ detail_product.product_id }">
 						<img class="img-list li-text"
 						src="<c:url value = '/template/web/img/product/${detail_product.product_image }'/>"
 						alt="">
@@ -162,7 +212,7 @@
 
 					<div class="product__item__price">
 						<f title="{{ $relate_pro->product_name }}">${detail_product.product_name }</f>
-						<span>${detail_product.product_price }</span>
+						<span><fmt:formatNumber value="${detail_product.product_price}" type="currency" currencyCode="VND" maxFractionDigits="0" pattern="#,### ₫"/></span>
 						<div class="price__button">
 							<form action="{{ URL::to('/save-cart') }}" method="POST">
 
@@ -182,11 +232,15 @@
 						</div>
 					</div>
 				</div>
-				</c:forEach>
-			</div>
-			
+			</c:forEach>
 		</div>
-	
+
+	</div>
+
 </div>
-<script src="<c:url value = '/template/web/js/product.js'/>"></script>
+
+
+<script src="<c:url value = '/template/web/js/product.js'/>">
+
+</script>
 

@@ -145,11 +145,15 @@
     animation: scaleX3 0.3s ease-out forwards;
 }
 
-.price__button--hover2 span, .price__button--hover2 i {
+.price__button--hover2 span, .price__button--hover2 span a, .price__button--hover2 i {
     position: relative;
     font-size: 1.4rem;
     z-index: 2;
+    
 }
+
+
+
 
 .price__button--hover2:hover {
     color: var(--main-red);
@@ -171,8 +175,11 @@
     text-align: center;
     background-color: var(--main-red);
     color: white;
+    text-decorator: none;
     z-index: 2;
 }
+
+
 
 .price__button__add2 span {
     font-family: 'Quicksand' !important;
